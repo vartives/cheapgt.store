@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wishlist</title>
+  <style>
+    /* CSS Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1e1e2f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .wishlist-item {
+      display: flex;
+      align-items: center;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 800px;
+      background: #2a2a40;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .wishlist-item:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .wishlist-item:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .item-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .item-image img:hover {
+      transform: scale(1.1);
+    }
+
+    .item-details h2 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+
+    .item-details p {
+      font-size: 1rem;
+      color: #bbb;
+      margin: 0 0 15px;
+    }
+
+    .buy-button {
+      background: #2575fc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background: #6a11cb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a2e;
+      margin-top: 50px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML Structure -->
+  <header>
+    <h1>Meine Wunschliste</h1>
+    <p>Alle PC Kompnenten die ich mir Wünsche!</p>
+  </header>
+
+  <main>
+    <section class="wishlist-item">
+      <div class="item-image">
+        <img src="cpu-cooler.png" alt="Water Cooler">
+      </div>
+      <div class="item-details">
+        <h2>CPU Wasserkühlung<h2>
+        <p>NZXT Kraken 240 : 360mm</p>
+        <a href="https://www.amazon.de/NZXT-Kraken-RL-KN240-B1-240mm-Wasserk%C3%BChlung-240x240-2x120mm/dp/B0BNYQQ97K?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=9O91OMZHO1TD&dib=eyJ2IjoiMSJ9.TLY7GSnNa1zRsnQzT7GyHiej5JLGmRQQ_r9w6rmUHIfUzV33kOKYBPSi-JNr4xRk-sa22JvFBo6jSAMvtv7NUe_E3ISMDBkRzbP_B8mWv0upxBr2opPq3hIRNbELLpaA_LNR6JYy43nu30k4orUTtU8xelCPQXZVB4pepmpa7mcHp8r38qI90Bed3BRD02TuNpzT2UWFSYo-Xz9sZ8wKUyfk_Pwy3Rc6lhA_ganK5OY.XFdumevn7bGXQh2eaTlzh8mFDaPFqXHCkZgTRpKu3GM&dib_tag=se&keywords=nzxt%2Bkraken%2B240&qid=1741349013&sprefix=nzxt%2Bkraken%2B240%2Caps%2C89&sr=8-3&th=1" target="_blank">
+          <button class="buy-button">Amazon Link</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="wishlist-item">
+      <div class="item-image">
+        <img src="pc-case.png" alt="PC Case">
+      </div>
+      <div class="item-details">
+        <h2>PC Case</h2>
+        <p>NZXT H9 Flow schwarz</p>
+        <a href="https://www.amazon.de/NZXT-Flow-Dual-Chamber-ATX-PC-Gaming-Geh%C3%A4use-High-Airflow-perforiertes/dp/B0BJGP7XQ7?crid=215GQT4NMJ9PV&dib=eyJ2IjoiMSJ9.U9O7w_ZipHzz_a33NBT4XujC1uxOMR9TMtk8EHQ44pUn17mWCwfVm0CEEzVYaKClA9Q-QH6Y7vbLhJmRNlLaFgq2nw0oubrSNQK9u-UCoDc6qEeJnzF0DE-LB3jXKwRN8lPKYNKgsIajmNDwcl1UvzWuDDwQkgV4cYIzaho1uZzmv3oI6c-bJjI3rHAKUkyrjhNYnouLP97O3OAVIJf3_zbyq26g9ME3pY_Ysyk0J9o.S9HFxGGsiGr9QJ2c9SeLgDLdSiinaDYYqYjvokFYOHY&dib_tag=se&keywords=nzxt%2Bh9%2Bflow&qid=1741349049&sprefix=nzxt%2B%2Caps%2C82&sr=8-3&th=1" target="_blank">
+          <button class="buy-button">Amazon Link</button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with ❤️ by [Your Name]</p>
+  </footer>
+
+  <script>
+    // JavaScript for Interactivity
+    document.addEventListener("DOMContentLoaded", function () {
+      // Add hover effect to wishlist items
+      const items = document.querySelectorAll(".wishlist-item");
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          item.style.transform = "scale(1.02)";
+          item.style.transition = "transform 0.3s ease";
+        });
+        item.addEventListener("mouseleave", () => {
+          item.style.transform = "scale(1)";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
